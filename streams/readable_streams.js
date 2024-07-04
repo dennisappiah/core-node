@@ -11,8 +11,7 @@ const fs = require("fs/promises");
   const streamWrite = fileHandleWrite.createWriteStream();
 
   streamRead.on("data", (chunk) => {
-    // decoding chunks to string
-    // Decoding chunks to string
+    // decoding chunks to strings
     const numbers = chunk.toString("utf-8").split(/\s+/).filter(Boolean);
 
     // Filtering even numbers

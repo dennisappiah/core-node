@@ -5,24 +5,24 @@ const { Buffer } = require("buffer");
 // CPU Usage: 100% (one core)
 // Memory Usage: 64.55MB
 
-// (async () => {
-//   console.time("WriteMany");
-//   const fileHandleWrite = await fs.open("text.txt", "w");
+(async () => {
+  console.time("WriteMany");
+  const fileHandleWrite = await fs.open("text.txt", "w");
 
-//   for (let i = 0; i < 1000000; i++) {
-//     await fileHandleWrite.write(` ${i} `);
-//   }
-//   console.timeEnd("WriteMany");
+  for (let i = 0; i < 1000000; i++) {
+    await fileHandleWrite.write(` ${i} `);
+  }
+  console.timeEnd("WriteMany");
 
-//   setInterval(() => {
-//     const memoryUsage = process.memoryUsage();
-//     console.log(
-//       `Memory Usage - RSS: ${memoryUsage.rss / (1024 * 1024)} MB, Heap Total: ${
-//         memoryUsage.heapTotal / (1024 * 1024)
-//       } MB, Heap Used: ${memoryUsage.heapUsed / (1024 * 1024)} MB`
-//     );
-//   }, 1000);
-// })();
+  setInterval(() => {
+    const memoryUsage = process.memoryUsage();
+    console.log(
+      `Memory Usage - RSS: ${memoryUsage.rss / (1024 * 1024)} MB, Heap Total: ${
+        memoryUsage.heapTotal / (1024 * 1024)
+      } MB, Heap Used: ${memoryUsage.heapUsed / (1024 * 1024)} MB`
+    );
+  }, 1000);
+})();
 
 // USING STREAMS
 // Execution time: 34.88s
