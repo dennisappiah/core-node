@@ -17,12 +17,11 @@ server.on("request", (request, response) => {
 
   // Listen for 'data' events to receive chunks of the request body
   request.on("data", (chunk) => {
-    data += chunk.toString(); // Convert chunk to string and append to data
+    data += chunk.toString();
   });
 
   // Listen for the 'end' event which signifies the end of the request body
   request.on("end", () => {
-    // Parse the accumulated data as JSON
     data = JSON.parse(data);
 
     // Send a JSON response back to the client

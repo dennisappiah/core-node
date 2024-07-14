@@ -11,7 +11,7 @@ const requestOptions = {
   method: "POST",
   path: "/create-post",
   headers: {
-    "Content-Type": "application/json", // Specify the MIME type for the request body
+    "Content-Type": "application/json", // Specifying the media type for the request body
     name: "dennis", // Custom request header added
 
     // "Content-Length": 55, // Explicitly setting the content length (adjust according to the actual data length)
