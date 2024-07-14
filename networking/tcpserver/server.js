@@ -1,7 +1,7 @@
 const net = require("net");
 
 const server = net.createServer((socket) => {
-  // socket object acting as a readable stream
+  //server reading buffer data sent by client
   socket.on("data", (data) => {
     // console.log(data.toString("utf-8"));
     console.log(data);
