@@ -11,4 +11,4 @@ int main(int argc , char *argv []){
 
 
 // gcc -o args args.c && ./args
-// .args firstargument
+// .args firstargument lastargument
